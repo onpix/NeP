@@ -1,0 +1,52 @@
+network: shape
+apply_occ_loss: true
+occ_loss_step: 20000
+bounds_type: sphere # sphere or aabb
+
+# nerf_only: false    # Stage 0: train a single nerf for both obj and bg. only applicable for NePShapeRenderer
+nerf:
+  ckpt: null
+  freeze_sigma: true # if ckpt provided, freeze the nerf
+  freeze_rgb: true
+  freeze_grid: true
+  near: 0.1 # will not be used for training, just for visualization the trained nerf.
+  far: 1000 # will not be used for training, just for visualization the trained nerf.
+  use_refnerf: false # input reflection dir for nerf
+  contract_bg: false
+  use_viewdirs: true # if false, color is fully dependent on xyz
+  sampler: nep_bg
+  din: 4 # if not mip, the value of input dim
+  mip: false
+
+bake_neus_to_nerf: false
+bake_every: 100
+bake_loss_type: l2
+
+unbiased_sigma: false
+# grid: # use occ grid to sample and render for neus and nerf
+#   enabled: false
+#   occ_only: false
+
+coarse_rgb_weight: 0.1
+shader_cfg:
+  use_bg_model: false
+  bg_sampler: uniform
+  # max_tan: 0.26794919243
+  # roughness_transform: "lambda x: x / 4"
+
+######loss######
+loss:
+  ex: ["nerf_render", "eikonal", "std", "init_sdf_reg"]
+# val_metric: ["shape_render"]
+# key_metric_name: psnr
+freeze_inv_s_step: 15000
+eikonal_weight: 0.1
+####trainier####
+# optimizer_type: adam
+# lr_type: warm_up_cos
+# lr_cfg: {}
+# total_step: 300000
+# val_interval: 5000
+# valid_num: 1 # save N images for validation
+# save_interval: 1000
+# train_log_step: 20

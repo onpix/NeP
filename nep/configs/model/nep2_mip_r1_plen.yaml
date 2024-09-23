@@ -1,0 +1,3 @@
+from: ./nep2_mip_r1.yaml
+shader_cfg:
+  plen_light: "nerf"

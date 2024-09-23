@@ -1,0 +1,3 @@
+from: ./nep1.yaml
+nerf:
+  mip: true

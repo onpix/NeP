@@ -1,0 +1,6 @@
+from: ./nep2_nerf.yaml
+
+bg_model:
+  ray_samples:
+    n_bg_samples: 32
+    n_bg_samples_importance: 64

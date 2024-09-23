@@ -1,0 +1,5 @@
+from: ./nep2_nerf64.yaml
+
+shader_cfg:
+  max_tan: 0.26794919243
+  roughness_transform: "lambda x: x"

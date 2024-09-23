@@ -1,0 +1,4 @@
+# config for nep with mipnerf model
+from: ./nep1_mip.yaml
+nerf:
+  contract_bg: true

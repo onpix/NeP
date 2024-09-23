@@ -1,0 +1,12 @@
+from: ./nep2_mip_r1_inout.yaml
+
+shader_cfg:
+  diffuse_sample_num: 32
+  specular_sample_num: 16
+
+bg_model:
+  ray_samples:
+    n_samples: null
+    n_bg_samples: 32 # actual num
+    n_importance: null
+    up_sample_steps: null

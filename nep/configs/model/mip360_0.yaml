@@ -1,0 +1,5 @@
+# Stage 0: train a mipnerf-360 using occ grid for both obj and bg. skip neus training
+from: ./mip0.yaml
+nerf:
+  sampler: prop
+  contract_bg: true

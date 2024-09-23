@@ -1,0 +1,6 @@
+# refnerf + 360 + prop sampler
+from: ./mip0.yaml
+nerf:
+  sampler: prop
+  contract_bg: true
+  use_refnerf: true

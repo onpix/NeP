@@ -1,0 +1,14 @@
+from: ./nep1.yaml
+network: nerf
+loss:
+  ex: ["nerf_render"]
+# loss: ["nerf_render", "s3im"]
+valid_num: 5
+val_metric: ["nerf_render"]
+coarse_rgb_weight: 0.
+
+n_bg_samples: 32
+n_bg_samples_importance: 64
+nerf:
+  sampler: pdf
+  mip: true

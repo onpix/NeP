@@ -1,0 +1,6 @@
+from: ./nep1_mip.yaml
+nerf:
+  contract_bg: false
+  use_refnerf: false
+  sampler: grid
+  # ckpt: undefined

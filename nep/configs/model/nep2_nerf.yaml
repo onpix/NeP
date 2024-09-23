@@ -1,0 +1,21 @@
+from: ./nep2.yaml
+
+shader_cfg:
+  diffuse_sample_num: 8
+  specular_sample_num: 4
+  outer_light_version: [nerf]
+  plen_light: null
+  inner_light: "mlp" # mlp, nerf, neus
+  freeze_neus: true
+  # trace_obj_lighting: false
+  nerf_sampler: nep_bg
+
+bg_model:
+  enabled: true
+  ckpt: undefined
+  # shape_cfg: undefined
+  freeze_nerf: false
+
+  ray_samples:
+    n_bg_samples: 8
+    n_bg_samples_importance: 16

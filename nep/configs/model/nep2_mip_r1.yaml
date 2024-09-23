@@ -1,0 +1,5 @@
+from: ./nep2_mip.yaml
+
+shader_cfg:
+  roughness_transform: "lambda x: x / 4"
+  detach_roughness: false

@@ -1,0 +1,15 @@
+nerfstudio
+tensorboardX
+open3d
+#torch==1.11.0
+numpy
+#open3d==0.16.0
+pymcubes
+plyfile
+h5py
+transforms3d
+tqdm
+opencv-python
+pyyaml
+scikit-image
+ipdb

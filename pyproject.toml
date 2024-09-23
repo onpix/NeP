@@ -1,0 +1,18 @@
+[project]
+name = "nep"
+version = "0.1.0"
+
+dependencies = [
+]
+
+[tool.setuptools.packages.find]
+include = ["nep"]
+
+[project.entry-points.'nerfstudio.method_configs']
+nep = 'nep.ns.config:nep_method'
+
+[project.entry-points.'nerfstudio.dataparser_configs']
+nep-real-data = 'nep.ns.nep_dataparser:nep_real_data'
+
+[tool.black]
+line-length = 100
