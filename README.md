@@ -12,7 +12,7 @@
 1. Download the dataset from: [Onedrive Link](https://portland-my.sharepoint.com/:u:/g/personal/hywang26-c_my_cityu_edu_hk/EdvKn7xd829BihTzRvR4alMB7LAxItpE8hJ6z57TEnGt1g?e=aXQ54u)
 2. Place the data folders under `./data`
 
-## Train
+## Running
 
 ```
 # geometry learning (stage 1)
